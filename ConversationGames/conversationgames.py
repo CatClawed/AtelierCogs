@@ -9,7 +9,7 @@ class ConversationGames(BaseCog):
     """Conversation games"""
 
     def __init__(self):
-        # self.config = Config.get_conf(self, identifier=763123)
+        self.config = Config.get_conf(self, identifier=763123)
         default_global = {
             "wyr": [
                 "...always be 10 minutes late or always be 20 minutes early?",
