@@ -587,19 +587,18 @@ class ConversationGames(BaseCog):
         embed.title = "Never have I ever.."
         embed.description = strings[i]
         await ctx.send(embed=embed)
-
+		
     @commands.command()
     @commands.bot_has_permissions(embed_links=True)
     async def truth(self, ctx):
         """Ask a truth question to users!"""
 
-        # Get and pick random string
         strings = await self.config.truths()
         mn = len(strings)
         i = randint(0, mn - 1)
 
         # Build Embed
         embed = discord.Embed()
-        embed.title = f"Truth"
+        embed.title = "Truth"
         embed.description = strings[i]
         await ctx.send(embed=embed)
